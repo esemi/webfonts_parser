@@ -1,5 +1,5 @@
 Парсер веб шрифтов с myfonts.com
 
 phantomjs-1.9.8/phantomjs --config=config.json parser1.js news-gothic
-phantomjs-1.9.8/phantomjs --config=config.json parser2.js http://www.myfonts.com/fonts/urw/news-gothic/webfont_preview.html
+phantomjs-1.9.8/phantomjs --ignore-ssl-errors='true' --load-images='false' parser2.js http://www.myfonts.com/fonts/urw/news-gothic/webfont_preview.html
 phantomjs-1.9.8/phantomjs --config=config.json css_parser.js test

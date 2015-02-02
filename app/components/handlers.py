@@ -146,14 +146,10 @@ class ParseRequestHandler(BaseHandler):
     def phantom_parsing_call(self, url):
         app_log.info('phantom process start %s' % url)
         # todo proxy servers
-        # todo replace config.json to command options
         js_parser_path = os.path.sep.join([self.application.app_path, 'js_parser'])
-        phantom_parser_cmd = "%s --config=%s --proxy=182.239.127.139:81 %s %swebfont_preview.html" % (
-            os.path.sep.join([js_parser_path, 'phantomjs-1.9.8', 'phantomjs']),
-            os.path.sep.join([js_parser_path, 'config.json']),
-            os.path.sep.join([js_parser_path, 'parser2.js']),
-            url
-        )
+        phantom_parser_cmd = "%s --ignore-ssl-errors='true' --load-images='false' --proxy=%s %s %swebfont_preview.html"\
+                             % (os.path.sep.join([js_parser_path, 'phantomjs-1.9.8', 'phantomjs']),
+                                '182.239.127.139:81', os.path.sep.join([js_parser_path, 'parser2.js']), url)
         app_log.info('command: <<%s>>' % phantom_parser_cmd)
 
         try:
