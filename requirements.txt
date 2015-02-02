@@ -1,0 +1,5 @@
+tornado==4.0.2
+motor==0.3.4
+mmh3==2.3
+yieldpoints==0.1
+pycurl
