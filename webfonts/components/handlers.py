@@ -146,6 +146,7 @@ class ParseRequestHandler(BaseHandler):
     def phantom_parsing_call(self, url):
         app_log.info('phantom process start %s' % url)
         # todo proxy servers
+        # todo logs path
         js_parser_path = os.path.sep.join([self.application.app_path, 'js_parser'])
         phantom_parser_cmd = "%s --ignore-ssl-errors='true' --load-images='false' --proxy=%s %s %swebfont_preview.html"\
                              % (os.path.sep.join([js_parser_path, 'phantomjs-1.9.8', 'phantomjs']),

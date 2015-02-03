@@ -6,7 +6,7 @@ __author__ = 'esemi'
 
 import unittest
 
-from app.components.handlers import ParseRequestHandler
+from webfonts.components.handlers import ParseRequestHandler
 
 
 class QueryUrlParserTest(unittest.TestCase):
