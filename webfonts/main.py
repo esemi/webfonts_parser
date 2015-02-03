@@ -51,7 +51,7 @@ def make_app():
 
 
 if __name__ == "__main__":
-    os.chdir(APP_DIR)
+    os.chdir(APP_DIR)  # fixme crutch
     parse_command_line()
 
     app = make_app()
