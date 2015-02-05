@@ -51,8 +51,10 @@ def make_app():
 
 
 if __name__ == "__main__":
-    os.chdir(APP_DIR)  # fixme crutch
     parse_command_line()
+
+    # todo add logs path to options
+    # todo add PYTHONPATH to supervisord.conf ?
 
     app = make_app()
     http_server = tornado.httpserver.HTTPServer(app, xheaders=True)
