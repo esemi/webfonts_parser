@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
     app = make_app()
     http_server = tornado.httpserver.HTTPServer(app, xheaders=True)
-    http_server.bind(options.port)
+    http_server.bind(options.port, address='127.0.0.1')
     http_server.start()
 
     tornado.ioloop.IOLoop.instance().start()
