@@ -50,7 +50,7 @@ class MainHandler(BaseHandler):
 
 class ParseRequestHandler(BaseHandler):
     @gen.coroutine
-    def get(self):
+    def post(self):
         """Order crawling and return font data or error"""
         try:
             query_url = self.get_argument('url')
