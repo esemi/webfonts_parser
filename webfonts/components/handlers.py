@@ -148,9 +148,9 @@ class ParseRequestHandler(BaseHandler):
         # todo proxy servers
         # todo logs path
         js_parser_path = os.path.sep.join([self.application.app_path, 'js_parser'])
-        phantom_parser_cmd = "%s --ignore-ssl-errors='true' --load-images='false' --proxy=%s %s %swebfont_preview.html"\
+        phantom_parser_cmd = "%s --ignore-ssl-errors='true' --load-images='false' %s %swebfont_preview.html"\
                              % (os.path.sep.join([js_parser_path, 'phantomjs-1.9.8', 'phantomjs']),
-                                '182.239.127.139:81', os.path.sep.join([js_parser_path, 'parser2.js']), url)
+                                os.path.sep.join([js_parser_path, 'parser2.js']), url)
         app_log.info('command: <<%s>>' % phantom_parser_cmd)
 
         try:
