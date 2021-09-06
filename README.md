@@ -1,6 +1,9 @@
-webfonts parser service
-=========
+webfonts parser
+---
 
-* source venv/bin/activate
-* pip install -r requirements.txt
-* python webfonts/main.py
+### Usage
+```
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ python webfonts/main.py
+```
